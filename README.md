@@ -1,11 +1,12 @@
 # Aplicación 
-La aplicación Angular presenta una tienda online de una chacinería.
+La aplicación Angular presenta una tienda online de una chacutería.
 * Agustín Ariel Coria.
 * DNI: 42679497.
 * soyagustincoria@gmail.com
 * Sede Tandil.
 
------
+---
+---
 ---
 
 # CharcuteriaAngular
