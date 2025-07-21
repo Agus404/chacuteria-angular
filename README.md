@@ -1,3 +1,13 @@
+# Aplicación 
+La aplicación Angular presenta una tienda online de una chacinería.
+* Agustín Ariel Coria.
+* DNI: 42679497.
+* soyagustincoria@gmail.com
+* Sede Tandil.
+
+-----
+---
+
 # CharcuteriaAngular
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.

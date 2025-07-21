@@ -1,0 +1,44 @@
+<h2> Lista de productos</h2>
+<table class="table text-centered">
+    <thead class="table_head">
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Cant</th>
+            <th>Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of products; track product.name){
+            <tr [class.clearance]="product.clearance">
+                <!-- <td><img class="img-thumbnail" [src]="product.image" [alt]="product.name" width="90" ></td> -->
+                <td>{{product.name}}</td>
+                <td>{{product.type}}</td>
+                <td>{{product.price |currency}}</td>
+                    @if (product.stock>0){
+                    <td> {{product.stock}}</td>
+                    } @else {
+                    <td><span class="badge text-bg-warning">Sin Stock</span></td>
+                    }
+                <td>
+                    @if(product.stock){
+                        <app-input-integer [(quantity)]="product.quantity" [max] = "product.stock" (maxReached)="maxReached($event)"></app-input-integer> 
+                    }
+                </td>
+                <td>
+                    @if(product.stock){
+                        <button class="btn btn-primary" (click)="addToCart(product)" >Comprar</button>
+                    }
+                </td>
+            </tr>
+        }@empty {
+            <tr>
+                <td coldspan="7">No hay productos disponibles.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- <app-add-product (productAdded)="onProductAdded($event)"></app-add-product> -->
